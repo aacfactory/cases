@@ -17,16 +17,13 @@
 
 package cases
 
-type Case interface {
-	Name() (name string)
-	Format(atoms []string) (v string, err error)
-	Parse(name string) (atoms []string, err error)
-}
+import (
+	"fmt"
+	"testing"
+)
 
-func Vars() (v map[string]Case) {
-	v = make(map[string]Case)
-	v[Camel().Name()] = Camel()
-	v[Snake().Name()] = Snake()
-	v[Kebab().Name()] = Kebab()
-	return
+func TestKebab(t *testing.T) {
+	c := Kebab()
+	fmt.Println(c.Format([]string{"foo", "bar"}))
+	fmt.Println(c.Parse("foo0-bar"))
 }
