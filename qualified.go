@@ -33,7 +33,7 @@ func (q *qualified) Name() (name string) {
 	return
 }
 
-func (q *qualified) Format(atoms []string) (v string, err error) {
+func (q *qualified) Format(atoms []string) (v string) {
 	for _, atom := range atoms {
 		v = v + "." + strings.TrimSpace(atom)
 	}

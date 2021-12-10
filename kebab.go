@@ -33,7 +33,7 @@ func (k *kebab) Name() (name string) {
 	return
 }
 
-func (k *kebab) Format(atoms []string) (v string, err error) {
+func (k *kebab) Format(atoms []string) (v string) {
 	for _, atom := range atoms {
 		v = v + "-" + strings.TrimSpace(atom)
 	}

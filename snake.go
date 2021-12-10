@@ -32,7 +32,7 @@ func (s *snake) Name() (name string) {
 	return
 }
 
-func (s *snake) Format(atoms []string) (v string, err error) {
+func (s *snake) Format(atoms []string) (v string) {
 	for _, atom := range atoms {
 		v = v + "_" + strings.TrimSpace(atom)
 	}

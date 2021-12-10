@@ -19,7 +19,7 @@ package cases
 
 type Case interface {
 	Name() (name string)
-	Format(atoms []string) (v string, err error)
+	Format(atoms []string) (v string)
 	Parse(name string) (atoms []string, err error)
 }
 

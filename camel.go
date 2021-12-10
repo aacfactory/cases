@@ -36,7 +36,7 @@ func (c *camel) Name() (name string) {
 	return
 }
 
-func (c *camel) Format(atoms []string) (v string, err error) {
+func (c *camel) Format(atoms []string) (v string) {
 	buf := bytes.NewBufferString("")
 	for _, atom := range atoms {
 		if len(atom) > 0 {
