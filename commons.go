@@ -23,8 +23,16 @@ func split(s string, sep string) (atoms []string, err error) {
 	}
 	matches := reg.FindAllStringIndex(s, -1)
 	atoms = make([]string, 0, len(matches))
-	for _, match := range matches {
-		atoms = append(atoms, strings.ToLower(s[match[0]:match[1]]))
+	for i := 0; i < len(matches); i++ {
+		beg := 0
+		if i > 0 {
+			beg = matches[i][0]
+		}
+		end := len(s)
+		if i+1 < len(matches) {
+			end = matches[i+1][0]
+		}
+		atoms = append(atoms, strings.ToLower(s[beg:end]))
 	}
 	return
 }

@@ -8,7 +8,7 @@ import (
 func TestCamel(t *testing.T) {
 
 	c := Camel()
-	fmt.Println(c.Parse("fooBar"))
+	fmt.Println(c.Parse("_Hoo0Bar0"))
 	fmt.Println(c.Format([]string{"foo", "bar"}))
 
 }
