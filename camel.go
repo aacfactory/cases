@@ -5,8 +5,10 @@ import (
 	"fmt"
 )
 
+var _camel = &camel{}
+
 func Camel() Case {
-	return &camel{}
+	return _camel
 }
 
 type camel struct {

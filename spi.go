@@ -8,7 +8,7 @@ type Case interface {
 
 func Vars() (v map[string]Case) {
 	v = make(map[string]Case)
-	// todo
-
+	v[Camel().Name()] = Camel()
+	v[Snake().Name()] = Snake()
 	return
 }
