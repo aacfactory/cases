@@ -28,7 +28,7 @@ func MapTo(src Case, dest Case, name string) (v string, err error) {
 		err = parseErr
 		return
 	}
-	v, err = dest.Format(atoms)
+	v = dest.Format(atoms)
 	return
 }
 
