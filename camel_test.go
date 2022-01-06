@@ -29,3 +29,10 @@ func TestCamel(t *testing.T) {
 	fmt.Println(c.Format([]string{"foo", "bar"}))
 
 }
+
+func TestLowerCamel(t *testing.T) {
+	c := LowerCamel()
+	fmt.Println(c.Parse("_hoo0Bar0"))
+	fmt.Println(c.Format([]string{"foo", "bar"}))
+
+}

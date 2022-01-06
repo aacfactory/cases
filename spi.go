@@ -26,6 +26,7 @@ type Case interface {
 func Vars() (v map[string]Case) {
 	v = make(map[string]Case)
 	v[Camel().Name()] = Camel()
+	v[LowerCamel().Name()] = LowerCamel()
 	v[Snake().Name()] = Snake()
 	v[Kebab().Name()] = Kebab()
 	v[Qualified().Name()] = Qualified()
